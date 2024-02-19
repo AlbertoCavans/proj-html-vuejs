@@ -1,15 +1,13 @@
 <script>
 export default {
   data() {
-    return {
-      title: "Hello world",
-    };
+    return {};
   },
 };
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <h1>AppHeader</h1>
 </template>
 
 <style lang="scss" scoped></style>
