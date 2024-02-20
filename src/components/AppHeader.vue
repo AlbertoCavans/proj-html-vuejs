@@ -35,6 +35,8 @@ export default {
   },
   props: {
     socialLinks: Array,
+    quickLinks: Array,
+    educationLinks: Array,
   },
 
   methods: {
@@ -80,22 +82,24 @@ export default {
   <div class="header-container">
     <!-- SLIDER -->
     <div class="slider-wrapper" tabindex="0">
-      <!-- PREV ARROW -->
-      <div class="prev" @click="prevSlide()">
-        <font-awesome-icon icon="fa-solid fa-chevron-left" />
-      </div>
-      <!-- NEXT ARROW -->
-      <div class="next" @click="nextSlide()">
-        <font-awesome-icon icon="fa-solid fa-chevron-right" />
-      </div>
       <!-- OBSERVED -->
       <div class="item">
-        <img :src="buildImagePath(slides[observedImg].image)" alt="Spiderman" />
+        <img
+          :src="buildImagePath(slides[observedImg].image)"
+          alt="football poster"
+        />
       </div>
     </div>
-    <div class="header-bar">
+    <!-- HEADER-BAR -->
+    <div class="header-bar w-100">
+      <!-- LOGO-BAR -->
       <div class="logo-bar">
-        <ul class="d-flex align-items-center justify-content-center">
+        <img
+          src="../assets/img/logo-football.png"
+          alt=""
+          class="logo-league position-absolute"
+        />
+        <ul class="sponsor-list">
           <li v-for="sponsorImg in sponsorImgs">
             <img :src="buildImagePath(sponsorImg.image)" alt="" />
           </li>
@@ -108,6 +112,45 @@ export default {
           </li>
         </ul>
       </div>
+      <!-- NAVBAR-MENU -->
+      <nav class="navbar">
+        <ul>
+          <li v-for="quickLink in quickLinks">
+            <a :href="quickLink.url">
+              {{ quickLink.text }}
+            </a>
+          </li>
+        </ul>
+        <ul>
+          <li v-for="educationLink in educationLinks">
+            <a :href="educationLink.url">
+              {{ educationLink.text }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- CENTER TITLE -->
+    <div class="center-header p-5">
+      <!-- PREV ARROW -->
+      <div class="prev" @click="prevSlide()">
+        <font-awesome-icon icon="fa-solid fa-chevron-left" />
+      </div>
+
+      <div class="title-area">
+        <h1>Football CLub</h1>
+        <h1>Sport CLub</h1>
+        <h4 class="p-4">Private football matches</h4>
+        <button type="button" class="btn btn-outline-light pt-4">
+          Learn More <font-awesome-icon icon="fa-solid fa-arrow-right-long" />
+        </button>
+      </div>
+      <div>
+        <!-- NEXT ARROW -->
+        <div class="next" @click="nextSlide()">
+          <font-awesome-icon icon="fa-solid fa-chevron-right" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -115,10 +158,15 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/style/partials/mixins" as *;
 @use "../assets/style/partials/variables" as *;
+* {
+  overflow: hidden;
+}
 .header-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  color: $white-color;
 }
 
 /* !!!!!!!!!!!!!!!! SLIDER */
@@ -146,11 +194,10 @@ export default {
   height: 50px;
   border-radius: 50%;
   border: 2px solid $white-color;
-  color: $white-color;
   position: absolute;
-  top: calc(50% - 25px);
+  top: calc(60%);
   cursor: pointer;
-  z-index: 1;
+  z-index: 4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,18 +211,54 @@ export default {
 }
 
 .header-bar {
-  background-color: rgba(0, 0, 0, 0);
-  height: 400px;
-  color: $white-color;
+  background-color: rgba(0, 0, 0, 0.675);
+  height: 300px;
+  padding: 70px;
+  font-weight: 700;
 }
 
 .logo-bar {
   height: 150px;
   @include centered();
-  background-image: url(../assets/img/logo-football.png);
+  .logo-league {
+    z-index: -1;
+    width: 150px;
+  }
+}
+
+.sponsor-list {
+  @include centered();
 }
 
 ul {
   padding: 30px;
+}
+
+.navbar ul {
+  @include center-between();
+  width: 50%;
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.center-header {
+  @include center-between();
+  h1 {
+    font-size: 6rem;
+    font-weight: 700;
+  }
+}
+
+.title-area {
+  @include centered();
+  flex-direction: column;
+}
+
+.btn-outline-light {
+  padding: 15px 40px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 </style>
