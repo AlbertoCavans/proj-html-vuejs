@@ -18,6 +18,7 @@ import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 
 library.add(
   faTwitter,
@@ -27,7 +28,8 @@ library.add(
   faPhoneVolume,
   faFacebookF,
   faEnvelope,
-  faInstagram
+  faInstagram,
+  faCopyright
 );
 
 const app = createApp(App);
