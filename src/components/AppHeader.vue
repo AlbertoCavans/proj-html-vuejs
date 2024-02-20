@@ -17,10 +17,24 @@ export default {
         },
       ],
 
+      sponsorImgs: [
+        {
+          image: "sponsor1.png",
+          url: "#",
+        },
+        {
+          image: "sponsor2.png",
+          url: "#",
+        },
+      ],
+
       observedImg: 0,
 
       autoMode: false,
     };
+  },
+  props: {
+    socialLinks: Array,
   },
 
   methods: {
@@ -64,6 +78,7 @@ export default {
 
 <template>
   <div class="header-container">
+    <!-- SLIDER -->
     <div class="slider-wrapper" tabindex="0">
       <!-- PREV ARROW -->
       <div class="prev" @click="prevSlide()">
@@ -78,16 +93,39 @@ export default {
         <img :src="buildImagePath(slides[observedImg].image)" alt="Spiderman" />
       </div>
     </div>
+    <div class="header-bar">
+      <div class="logo-bar">
+        <ul class="d-flex align-items-center justify-content-center">
+          <li v-for="sponsorImg in sponsorImgs">
+            <img :src="buildImagePath(sponsorImg.image)" alt="" />
+          </li>
+        </ul>
+        <ul class="d-flex justify-content-start">
+          <li v-for="socialLink in socialLinks" class="h3 px-3 py-1 mx-2">
+            <a :href="socialLink.url">
+              <font-awesome-icon :icon="socialLink.icon" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-
-  <h1>AppHeader</h1>
 </template>
 
 <style lang="scss" scoped>
+@use "../assets/style/partials/mixins" as *;
+@use "../assets/style/partials/variables" as *;
 .header-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* !!!!!!!!!!!!!!!! SLIDER */
+.slider-wrapper {
+  position: absolute;
+  top: 0;
+  z-index: -3;
 }
 
 .item {
@@ -107,8 +145,8 @@ export default {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #ccc;
-  color: #ccc;
+  border: 2px solid $white-color;
+  color: $white-color;
   position: absolute;
   top: calc(50% - 25px);
   cursor: pointer;
@@ -123,5 +161,21 @@ export default {
 }
 .next {
   right: 50px;
+}
+
+.header-bar {
+  background-color: rgba(0, 0, 0, 0);
+  height: 400px;
+  color: $white-color;
+}
+
+.logo-bar {
+  height: 150px;
+  @include centered();
+  background-image: url(../assets/img/logo-football.png);
+}
+
+ul {
+  padding: 30px;
 }
 </style>
