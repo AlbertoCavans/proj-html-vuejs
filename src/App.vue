@@ -68,7 +68,11 @@ export default {
 </script>
 
 <template>
-  <app-header :socialLinks="socialLinks"></app-header>
+  <app-header
+    :socialLinks="socialLinks"
+    :educationLinks="educationLinks"
+    :quickLinks="quickLinks"
+  ></app-header>
   <app-main></app-main>
   <app-footer
     :socialLinks="socialLinks"
