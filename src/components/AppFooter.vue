@@ -109,10 +109,8 @@ export default {
       </div>
     </div>
     <!-- COPYRIGHT -->
-    <div
-      class="copyright-section d-flex justify-content-center align-items-center"
-    >
-      <h6 class="overflow-hidden">
+    <div class="copyright-section">
+      <h6 class="p-2">
         <font-awesome-icon icon="fa-regular fa-copyright" />
         2022 Football Club - All Rights Reserved.
       </h6>
@@ -121,15 +119,15 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.bordered {
-  border: 2px solid red;
-}
+@use "../assets/style/partials/mixins" as *;
+@use "../assets/style/partials/variables" as *;
 
 footer {
   background-image: url("../assets/img/footer-bg-football.jpg");
-  color: white;
+  color: $white-color;
   .copyright-section {
     height: 80px;
+    @include centered();
   }
 }
 
