@@ -19,6 +19,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
   faTwitter,
@@ -29,7 +30,8 @@ library.add(
   faFacebookF,
   faEnvelope,
   faInstagram,
-  faCopyright
+  faCopyright,
+  faArrowRightLong
 );
 
 const app = createApp(App);
