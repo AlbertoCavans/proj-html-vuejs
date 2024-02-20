@@ -22,6 +22,44 @@ export default {
           url: "#",
         },
       ],
+
+      educationLinks: [
+        {
+          text: "FIXTURES & RESULTS",
+          url: "#",
+        },
+        {
+          text: "LEAGUE TABLE",
+          url: "#",
+        },
+        {
+          text: "PLAYERS",
+          url: "#",
+        },
+        {
+          text: "GALLERY",
+          url: "#",
+        },
+      ],
+
+      quickLinks: [
+        {
+          text: "HOME",
+          url: "#",
+        },
+        {
+          text: "BLOG",
+          url: "#",
+        },
+        {
+          text: "GALLERY",
+          url: "#",
+        },
+        {
+          text: "CONTACT",
+          url: "#",
+        },
+      ],
     };
   },
 
@@ -32,7 +70,12 @@ export default {
 <template>
   <app-header></app-header>
   <app-main></app-main>
-  <app-footer :socialLinks="socialLinks"></app-footer>
+  <app-footer
+    :socialLinks="socialLinks"
+    :educationLinks="educationLinks"
+    :quickLinks="quickLinks"
+  >
+  </app-footer>
 </template>
 
 <style lang="scss">
