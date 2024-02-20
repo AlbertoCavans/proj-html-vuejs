@@ -8,6 +8,20 @@ export default {
   data() {
     return {
       store,
+      socialLinks: [
+        {
+          icon: "fa-brands fa-facebook-f",
+          url: "#",
+        },
+        {
+          icon: "fa-brands fa-instagram",
+          url: "#",
+        },
+        {
+          icon: "fa-brands fa-twitter",
+          url: "#",
+        },
+      ],
     };
   },
 
@@ -18,7 +32,7 @@ export default {
 <template>
   <app-header></app-header>
   <app-main></app-main>
-  <app-footer></app-footer>
+  <app-footer :socialLinks="socialLinks"></app-footer>
 </template>
 
 <style lang="scss">
