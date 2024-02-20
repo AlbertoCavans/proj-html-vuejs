@@ -8,58 +8,6 @@ export default {
   data() {
     return {
       store,
-      socialLinks: [
-        {
-          icon: "fa-brands fa-facebook-f",
-          url: "#",
-        },
-        {
-          icon: "fa-brands fa-instagram",
-          url: "#",
-        },
-        {
-          icon: "fa-brands fa-twitter",
-          url: "#",
-        },
-      ],
-
-      educationLinks: [
-        {
-          text: "FIXTURES & RESULTS",
-          url: "#",
-        },
-        {
-          text: "LEAGUE TABLE",
-          url: "#",
-        },
-        {
-          text: "PLAYERS",
-          url: "#",
-        },
-        {
-          text: "GALLERY",
-          url: "#",
-        },
-      ],
-
-      quickLinks: [
-        {
-          text: "HOME",
-          url: "#",
-        },
-        {
-          text: "BLOG",
-          url: "#",
-        },
-        {
-          text: "GALLERY",
-          url: "#",
-        },
-        {
-          text: "CONTACT",
-          url: "#",
-        },
-      ],
     };
   },
 
@@ -69,15 +17,15 @@ export default {
 
 <template>
   <app-header
-    :socialLinks="socialLinks"
-    :educationLinks="educationLinks"
-    :quickLinks="quickLinks"
+    :socialLinks="store.socialLinks"
+    :educationLinks="store.educationLinks"
+    :quickLinks="store.quickLinks"
   ></app-header>
   <app-main></app-main>
   <app-footer
-    :socialLinks="socialLinks"
-    :educationLinks="educationLinks"
-    :quickLinks="quickLinks"
+    :socialLinks="store.socialLinks"
+    :educationLinks="store.educationLinks"
+    :quickLinks="store.quickLinks"
   >
   </app-footer>
 </template>
