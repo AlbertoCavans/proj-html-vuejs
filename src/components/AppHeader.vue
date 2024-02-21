@@ -215,14 +215,15 @@ export default {
   height: 300px;
   padding: 70px;
   font-weight: 700;
+  z-index: -2;
 }
 
 .logo-bar {
   height: 150px;
-  @include centered();
+  @include center-evenly();
   .logo-league {
-    z-index: -1;
     width: 150px;
+    z-index: -1;
   }
 }
 
