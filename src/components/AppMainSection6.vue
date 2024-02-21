@@ -50,7 +50,7 @@ export default {
 </script>
 
 <template>
-  <div class="container-news">
+  <div class="container-news p-5">
     <div class="thumb-box">
       <font-awesome-icon icon="fa-regular fa-thumbs-up" class="h1" />
     </div>
