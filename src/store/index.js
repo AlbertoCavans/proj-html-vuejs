@@ -249,4 +249,31 @@ export const store = reactive({
       guestTeamImg: "club-8.png",
     },
   ],
+
+  clients: [
+    {
+      img: "client2.png,",
+      clientLink: "#",
+    },
+    {
+      img: "client3.png,",
+      clientLink: "#",
+    },
+    {
+      img: "client4.png,",
+      clientLink: "#",
+    },
+    {
+      img: "client7.png,",
+      clientLink: "#",
+    },
+    {
+      img: "client9.png,",
+      clientLink: "#",
+    },
+    {
+      img: "client10.png,",
+      clientLink: "#",
+    },
+  ],
 });

@@ -10,7 +10,7 @@ export default {
   methods: {
     buildImagePath(imageName) {
       const imageUrl = new URL("../assets/img/" + imageName, import.meta.url);
-      console.log(imageUrl);
+      /* console.log(imageUrl); */
       return imageUrl.href;
     },
   },

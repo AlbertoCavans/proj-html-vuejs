@@ -22,6 +22,7 @@ import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
+import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 
 library.add(
   faTwitter,
@@ -35,7 +36,8 @@ library.add(
   faCopyright,
   faArrowRightLong,
   faCirclePlus,
-  faCalendarDays
+  faCalendarDays,
+  faThumbsUp
 );
 
 const app = createApp(App);
