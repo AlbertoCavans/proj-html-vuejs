@@ -97,6 +97,9 @@ export default {
       </div>
     </div>
   </div>
+  <div class="ad-container">
+    <img src="../assets/img/reklam.jpg" alt="" />
+  </div>
 </template>
 
 <style lang="scss" scoped>
