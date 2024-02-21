@@ -27,6 +27,16 @@ export default {
         <h2>{{ store.nextMatch.guestTeamName }}</h2>
       </div>
     </div>
+    <div class="row-info-match">
+      <strong>
+        <font-awesome-icon icon="fa-solid fa-calendar-days" />
+        {{ store.nextMatch.dateMatch }}</strong
+      >
+      <strong
+        ><font-awesome-icon icon="fa-solid fa-circle-plus" />
+        {{ store.nextMatch.location }}</strong
+      >
+    </div>
   </div>
 </template>
 
@@ -34,7 +44,8 @@ export default {
 @use "../assets/style/partials/mixins" as *;
 .next-match-section {
   @include center-evenly();
-  height: 400px;
+  flex-direction: column;
+  height: 300px;
   width: 1000px;
 }
 
@@ -46,6 +57,13 @@ export default {
     align-items: center;
   }
 }
+
+.row-info-match {
+  width: 500px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 * {
   overflow: hidden;
 }
