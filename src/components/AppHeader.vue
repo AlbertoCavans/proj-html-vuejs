@@ -195,7 +195,7 @@ export default {
   border-radius: 50%;
   border: 2px solid $white-color;
   position: absolute;
-  top: calc(60%);
+  top: 80%;
   cursor: pointer;
   z-index: 4;
   display: flex;
