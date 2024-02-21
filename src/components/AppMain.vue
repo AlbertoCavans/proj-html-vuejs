@@ -1,6 +1,7 @@
 <script>
 import { store } from "../store";
 import AppMainSection1 from "./AppMainSection1.vue";
+import AppMainSection2 from "./AppMainSection2.vue";
 
 export default {
   data() {
@@ -12,13 +13,14 @@ export default {
   methods: {
     buildImagePath(imageName) {
       const imageUrl = new URL("../assets/img/" + imageName, import.meta.url);
-      /* console.log(imageUrl); */
+      console.log(imageUrl);
       return imageUrl.href;
     },
   },
 
   components: {
     AppMainSection1,
+    AppMainSection2,
   },
 };
 </script>
@@ -29,6 +31,8 @@ export default {
       :homeTeamImg="buildImagePath(store.nextMatch.homeTeamImg)"
       :guestTeamImg="buildImagePath(store.nextMatch.guestTeamImg)"
     ></app-main-section1>
+
+    <app-main-section2></app-main-section2>
   </div>
 </template>
 
@@ -37,5 +41,6 @@ export default {
 
 .main-container {
   @include centered();
+  flex-direction: column;
 }
 </style>
