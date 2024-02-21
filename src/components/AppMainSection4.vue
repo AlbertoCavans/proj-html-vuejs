@@ -1,16 +1,107 @@
 <script>
+import { store } from "../store";
 export default {
   data() {
-    return {};
+    return {
+      store,
+    };
+  },
+
+  methods: {
+    buildImagePath(imageName) {
+      const imageUrl = new URL("../assets/img/" + imageName, import.meta.url);
+      console.log(imageUrl);
+      return imageUrl.href;
+    },
   },
 };
 </script>
 
 <template>
-  <div class="row w-75">
-    <div class="col-6"><h2>League Table</h2></div>
+  <div class="tables-container row w-75">
+    <div class="col-6 main-cols">
+      <h2 class="p-4">League Table</h2>
+      <div class="list-group">
+        <ul>
+          <li class="border bg-dark text-light px-4">
+            <div class="row">
+              <div class="col-7">TEAM</div>
+              <div class="col-1">W</div>
+              <div class="col-1">D</div>
+              <div class="col-1">L</div>
+              <div class="col-1">PTS</div>
+            </div>
+          </li>
+          <li
+            class="body-table1 px-4"
+            v-for="positionTeam in store.positionteams"
+          >
+            <div class="row">
+              <div class="col-1">{{ positionTeam.position }}</div>
+              <div class="col-6">
+                <img
+                  :src="buildImagePath(positionTeam.teamImg)"
+                  alt=""
+                  width="50px"
+                />
+                {{ positionTeam.teamName }}
+              </div>
+              <div class="col-1">{{ positionTeam.teamWins }}</div>
+              <div class="col-1">{{ positionTeam.teamDraws }}</div>
+              <div class="col-1">{{ positionTeam.teamLoses }}</div>
+              <div class="col-1">{{ positionTeam.teamPoints }}</div>
+            </div>
+          </li>
+          <li
+            class="bg-dark text-light d-flex align-items-center justify-content-center"
+          >
+            View Full League Table
+          </li>
+        </ul>
+      </div>
+    </div>
 
-    <div class="col-6"><h2>Fixture & Results</h2></div>
+    <div class="col-6 main-cols">
+      <h2 class="p-4">Fixture & Results</h2>
+      <div class="list-group">
+        <ul>
+          <li class="border bg-dark text-light px-4">
+            <div class="row">
+              <div class="col-7">TEAM</div>
+              <div class="col-1">W</div>
+              <div class="col-1">D</div>
+              <div class="col-1">L</div>
+              <div class="col-1">PTS</div>
+            </div>
+          </li>
+          <li
+            class="body-table1 px-4"
+            v-for="positionTeam in store.positionteams"
+          >
+            <div class="row">
+              <div class="col-1">{{ positionTeam.position }}</div>
+              <div class="col-6">
+                <img
+                  :src="buildImagePath(positionTeam.teamImg)"
+                  alt=""
+                  width="50px"
+                />
+                {{ positionTeam.teamName }}
+              </div>
+              <div class="col-1">{{ positionTeam.teamWins }}</div>
+              <div class="col-1">{{ positionTeam.teamDraws }}</div>
+              <div class="col-1">{{ positionTeam.teamLoses }}</div>
+              <div class="col-1">{{ positionTeam.teamPoints }}</div>
+            </div>
+          </li>
+          <li
+            class="bg-dark text-light d-flex align-items-center justify-content-center"
+          >
+            View Full League Table
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -21,7 +112,27 @@ export default {
   overflow: hidden;
 }
 
-.col-6 {
+.tables-container {
+  height: 900px;
+}
+
+.main-cols {
   @include centered();
+  height: 900px;
+  flex-direction: column;
+}
+
+.thead-dark tr {
+  color: white;
+  background-color: black;
+}
+
+.body-table1 {
+  background-color: $lightgray-color;
+}
+
+li {
+  width: 500px;
+  padding: 10px;
 }
 </style>
