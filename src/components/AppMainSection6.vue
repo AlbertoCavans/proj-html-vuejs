@@ -4,7 +4,7 @@ export default {
     return {
       articles: [
         {
-          img: "",
+          img: "news1-1.png",
           date: "29.05.2022",
           topic: "Football",
           title: "What is Football?",
@@ -12,7 +12,7 @@ export default {
             "Football is a sport that is known as a ball game and is loved by [...]",
         },
         {
-          img: "",
+          img: "news2-1.png",
           date: "29.05.2022",
           topic: "Football",
           title: "What is Football?",
@@ -20,7 +20,7 @@ export default {
             "Football is a sport that is known as a ball game and is loved by [...]",
         },
         {
-          img: "",
+          img: "news3-1.png",
           date: "29.05.2022",
           topic: "Football",
           title: "What is Football?",
@@ -28,7 +28,7 @@ export default {
             "Football is a sport that is known as a ball game and is loved by [...]",
         },
         {
-          img: "",
+          img: "news4-1.png",
           date: "29.05.2022",
           topic: "Football",
           title: "What is Football?",
@@ -37,6 +37,14 @@ export default {
         },
       ],
     };
+  },
+
+  methods: {
+    buildImagePath(imageName) {
+      const imageUrl = new URL("../assets/img/" + imageName, import.meta.url);
+      /* console.log(imageUrl); */
+      return imageUrl.href;
+    },
   },
 };
 </script>
@@ -51,14 +59,19 @@ export default {
       <h6 class="text-center">Be aware of the football world</h6>
     </div>
     <div class="container-cards">
-      <div class="card">
-        <img src="" alt="" />
-        <h6>Date</h6>
-        <h5>Title</h5>
+      <div class="card" v-for="article in articles">
+        <img :src="buildImagePath(article.img)" alt="" width="210px" />
+        <h6 class="py-2">
+          <span>{{ article.date }}</span> -
+          <span>{{ article.topic }}</span>
+        </h6>
+        <h5>{{ article.title }}</h5>
         <p class="font-weight-light">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur,
-          error.
+          {{ article.abstract }}
         </p>
+        <button type="button" class="btn btn-dark pt-4">
+          <h2>More</h2>
+        </button>
       </div>
     </div>
   </div>
@@ -72,7 +85,7 @@ export default {
 }
 .container-news {
   @include centered();
-  width: 100vh;
+  width: 100vw;
   flex-direction: column;
   .thumb-box {
     background-color: black;
@@ -89,10 +102,21 @@ export default {
   border-radius: 50%;
 }
 
-.card {
-  margin: 30px;
+.container-cards {
+  @include center-evenly();
+  .card {
+    margin: 30px;
+    @include centered();
+    padding: 20px;
+    width: 250px;
+  }
+}
+
+.btn-dark {
+  padding: 20px 35px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
   @include centered();
-  padding: 20px;
-  width: 300px;
 }
 </style>
