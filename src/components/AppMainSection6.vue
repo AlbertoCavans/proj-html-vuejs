@@ -69,7 +69,7 @@ export default {
         <p class="font-weight-light">
           {{ article.abstract }}
         </p>
-        <button type="button" class="btn btn-dark pt-4">
+        <button type="button" class="btn btn-dark mt-4">
           <h2>More</h2>
         </button>
       </div>
