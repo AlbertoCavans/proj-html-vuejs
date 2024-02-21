@@ -37,6 +37,7 @@ export default {
         {{ store.nextMatch.location }}</strong
       >
     </div>
+    <button type="button" class="btn btn-dark pt-4">View match details</button>
   </div>
 </template>
 
@@ -62,6 +63,12 @@ export default {
   width: 500px;
   display: flex;
   justify-content: space-evenly;
+}
+.btn-dark {
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 
 * {

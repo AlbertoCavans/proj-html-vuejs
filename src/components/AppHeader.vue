@@ -212,7 +212,7 @@ export default {
 
 .header-bar {
   background-color: rgba(0, 0, 0, 0.675);
-  height: 300px;
+  height: 350px;
   padding: 70px;
   font-weight: 700;
   z-index: -2;
@@ -258,7 +258,7 @@ ul {
 
 .btn-outline-light {
   padding: 15px 40px;
-  border-radius: 20px;
+  border-radius: 30px;
   font-size: 1.5rem;
   margin-bottom: 30px;
 }
