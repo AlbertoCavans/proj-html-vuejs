@@ -192,4 +192,61 @@ export const store = reactive({
       teamPoints: "20",
     },
   ],
+
+  allMatchs: [
+    {
+      homeTeamName: "Instanbul Sports",
+      homeTeamImg: "club-1.png",
+      guestTeamName: "UnitedFs Club",
+      guestTeamImg: "club-2.png",
+    },
+    {
+      homeTeamName: "Schalke Club",
+      homeTeamImg: "club-3.png",
+      guestTeamName: "Inter Club",
+      guestTeamImg: "club-4.png",
+    },
+    {
+      homeTeamName: "Atletico Club",
+      homeTeamImg: "club-9.png",
+      guestTeamName: "Schalke Club",
+      guestTeamImg: "club-3.png",
+    },
+    {
+      homeTeamName: "UnitedFs Club",
+      homeTeamImg: "club-2.png",
+      guestTeamName: "Bayern Club",
+      guestTeamImg: "club-8.png",
+    },
+    {
+      homeTeamName: "Arsenal Club",
+      homeTeamImg: "club-7.png",
+      guestTeamName: "Atletico Club",
+      guestTeamImg: "club-9.png",
+    },
+    {
+      homeTeamName: "Instanbul Sports",
+      homeTeamImg: "club-1.png",
+      guestTeamName: "UnitedFs Club",
+      guestTeamImg: "club-2.png",
+    },
+    {
+      homeTeamName: "Instanbul Sports",
+      homeTeamImg: "club-1.png",
+      guestTeamName: "UnitedFs Club",
+      guestTeamImg: "club-2.png",
+    },
+    {
+      homeTeamName: "Schalke Club",
+      homeTeamImg: "club-3.png",
+      guestTeamName: "Inter Club",
+      guestTeamImg: "club-4.png",
+    },
+    {
+      homeTeamName: "UnitedFs Club",
+      homeTeamImg: "club-2.png",
+      guestTeamName: "Bayern Club",
+      guestTeamImg: "club-8.png",
+    },
+  ],
 });

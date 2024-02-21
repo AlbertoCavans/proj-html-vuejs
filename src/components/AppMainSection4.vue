@@ -19,6 +19,7 @@ export default {
 
 <template>
   <div class="tables-container row w-75">
+    <!-- ******TABLE 1 -->
     <div class="col-6 main-cols">
       <h2 class="p-4">League Table</h2>
       <div class="list-group">
@@ -61,37 +62,30 @@ export default {
       </div>
     </div>
 
+    <!-- ****** TABLE2 -->
     <div class="col-6 main-cols">
       <h2 class="p-4">Fixture & Results</h2>
       <div class="list-group">
         <ul>
-          <li class="border bg-dark text-light px-4">
-            <div class="row">
-              <div class="col-7">TEAM</div>
-              <div class="col-1">W</div>
-              <div class="col-1">D</div>
-              <div class="col-1">L</div>
-              <div class="col-1">PTS</div>
-            </div>
-          </li>
-          <li
-            class="body-table1 px-4"
-            v-for="positionTeam in store.positionteams"
-          >
-            <div class="row">
-              <div class="col-1">{{ positionTeam.position }}</div>
-              <div class="col-6">
+          <li class="body-table1 px-4" v-for="allMatch in store.allMatchs">
+            <div class="row-teams">
+              <div class="d-flex">
                 <img
-                  :src="buildImagePath(positionTeam.teamImg)"
+                  :src="buildImagePath(allMatch.homeTeamImg)"
                   alt=""
-                  width="50px"
+                  width="30px"
                 />
-                {{ positionTeam.teamName }}
+                <h5>{{ allMatch.homeTeamName }}</h5>
               </div>
-              <div class="col-1">{{ positionTeam.teamWins }}</div>
-              <div class="col-1">{{ positionTeam.teamDraws }}</div>
-              <div class="col-1">{{ positionTeam.teamLoses }}</div>
-              <div class="col-1">{{ positionTeam.teamPoints }}</div>
+              <div><h5 class="h1">VS</h5></div>
+              <div>
+                <h5>{{ allMatch.guestTeamName }}</h5>
+                <img
+                  :src="buildImagePath(allMatch.guestTeamImg)"
+                  alt=""
+                  width="30px"
+                />
+              </div>
             </div>
           </li>
           <li
@@ -134,5 +128,14 @@ export default {
 li {
   width: 500px;
   padding: 10px;
+}
+
+.row-teams {
+  @include center-evenly();
+
+  div {
+    display: flex;
+    align-items: center;
+  }
 }
 </style>
