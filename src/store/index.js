@@ -252,27 +252,27 @@ export const store = reactive({
 
   clients: [
     {
-      img: "client2.png,",
+      img: "client2.png",
       clientLink: "#",
     },
     {
-      img: "client3.png,",
+      img: "client3.png",
       clientLink: "#",
     },
     {
-      img: "client4.png,",
+      img: "client4.png",
       clientLink: "#",
     },
     {
-      img: "client7.png,",
+      img: "client7.png",
       clientLink: "#",
     },
     {
-      img: "client9.png,",
+      img: "client9.png",
       clientLink: "#",
     },
     {
-      img: "client10.png,",
+      img: "client10.png",
       clientLink: "#",
     },
   ],

@@ -18,14 +18,14 @@ export default {
 </script>
 
 <template>
-  <div class="cards-container p-5">
+  <div class="cards-container p-1">
     <div class="card p-5" v-for="client in store.clients">
       <a :href="client.clientLink"
         ><img
           :src="buildImagePath(client.img)"
           alt=""
-          width="40px"
-          height="50px"
+          width="120px"
+          height="80"
         />
       </a>
     </div>
