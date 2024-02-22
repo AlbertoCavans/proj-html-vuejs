@@ -215,7 +215,7 @@ export default {
   height: 350px;
   padding: 70px;
   font-weight: 700;
-  z-index: -2;
+  z-index: 0;
 }
 
 .logo-bar {
