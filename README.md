@@ -1,7 +1,12 @@
-# Vue 3 + Vite
+# Mid-term project
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Per visualizzare:
 
-## Recommended IDE Setup
+- Aprire il terminale e lanciare
+npm i
+npm run dev
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Obiettivo del progetto
+
+- Creare la home page di un sito ideato per essere l'interfaccia web di un torneo di calcio come Champions League o Premier League.
+- Il progetto deve usare il framework Vue.js in modo da creare componenti riutilizzabili in più punti della pagina ed eventualmente nelle altre pagine del sito qualora si vogliano strutturare
