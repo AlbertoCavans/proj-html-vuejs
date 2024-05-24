@@ -3,10 +3,10 @@
 ## Per visualizzare:
 
 - Aprire il terminale e lanciare
-===
+```
 npm i
 npm run dev
-===
+```
 ## Obiettivo del progetto
 
 - Creare la home page di un sito ideato per essere l'interfaccia web di un torneo di calcio come Champions League o Premier League.
