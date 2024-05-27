@@ -2,7 +2,7 @@
 
 ## Per visualizzare:
 
-- Aprire il terminale e lanciare
+- Aprire il terminale del visualizer e lanciare
 ```
 npm i
 npm run dev
